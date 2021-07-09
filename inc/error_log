@@ -1,0 +1,4 @@
+[20-Feb-2019 00:36:23 America/Sao_Paulo] PHP Fatal error:  Call to undefined function baseUrl() in /home2/andremastering/public_html/inc/conta_header.php on line 17
+[20-Feb-2019 00:36:32 America/Sao_Paulo] PHP Fatal error:  Call to undefined function baseUrl() in /home2/andremastering/public_html/inc/admin_header.php on line 20
+[20-Feb-2019 00:36:35 America/Sao_Paulo] PHP Fatal error:  Call to undefined function baseUrl() in /home2/andremastering/public_html/inc/admin_footer.php on line 22
+[20-Feb-2019 00:37:52 America/Sao_Paulo] PHP Notice:  Undefined index: action in /home2/andremastering/public_html/inc/mensagem.php on line 2

@@ -1,0 +1,6 @@
+[05-Nov-2020 18:56:10 America/Sao_Paulo] PHP Notice:  Undefined index: where in /home3/andremastering/public_html/site/inc/functions/getData.php on line 7
+[05-Nov-2020 18:56:10 America/Sao_Paulo] PHP Notice:  Undefined index: or in /home3/andremastering/public_html/site/inc/functions/getData.php on line 7
+[05-Nov-2020 18:56:10 America/Sao_Paulo] PHP Notice:  Undefined variable: vlCondition in /home3/andremastering/public_html/site/inc/functions/getData.php on line 31
+[05-Nov-2020 18:56:57 America/Sao_Paulo] PHP Notice:  Undefined index: where in /home3/andremastering/public_html/site/inc/functions/getData.php on line 7
+[05-Nov-2020 18:56:57 America/Sao_Paulo] PHP Notice:  Undefined index: or in /home3/andremastering/public_html/site/inc/functions/getData.php on line 7
+[05-Nov-2020 18:56:57 America/Sao_Paulo] PHP Notice:  Undefined variable: vlCondition in /home3/andremastering/public_html/site/inc/functions/getData.php on line 31
