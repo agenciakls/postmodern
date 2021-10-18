@@ -2,7 +2,6 @@
 	<section class="jumbotron text-center header-slogan" style="background-image: url(<?php echo baseUrl(); ?>images/background_05.jpg) !important;">
 		<div class="container">
 			<img src="<?php echo baseUrl(); ?>images/title_logo_2.png" width="450" alt="">
-			<!-- <p class="lead text-muted text-slogan">Entre em contato com o atendimento deste engenheiro se você está interessado em reservar uma sessão</p> -->
 		</div>
 	</section>
 	<div class="header-agendamento-sessao">

@@ -13,6 +13,7 @@ var conditionNumber = function (status = false) {
 conditionNumber();
 // PREÇOS
 $('.field-mix').on('keyup', function ( e ) {
+	// teste
 	var mixes = $("#get-mixes").val();
 
 	if (mixes > 0) { conditionNumber(true); }
