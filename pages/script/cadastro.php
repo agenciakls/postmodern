@@ -6,8 +6,8 @@ if (verif_campo($campos)) {
 	defineCampo($campos);
 	$verificarUsuario = mysqli_query($conectar, sprintf("SELECT * FROM clientes WHERE usuario='%s'", $usuario));
 	$verificarEmail = mysqli_query($conectar, sprintf("SELECT * FROM clientes WHERE email='%s'", $email));
-	if ( quantityData($verificarUsuario) == 1 ) { echo 'usuario'; }
-	else if ( quantityData($verificarEmail) == 1 ) { echo 'email'; }
+	if ( quantityData($verificarUsuario) == 1 ) { $jsonResponse['status'] = 'usuario'; }
+	else if ( quantityData($verificarEmail) == 1 ) { $jsonResponse['status'] = 'email'; }
 	else {
 		$retorno = adicionarCampos('clientes');
 		$idCriada = ultimoIdInserido();
@@ -28,11 +28,9 @@ if (verif_campo($campos)) {
 						'email' => 'no-reply@postmodernmastering.com'
 					),
 				);
+				$jsonResponse['status'] = 'salvo';
 				$enviarEmail = sendmail($argsEmail);
 				$sendnotification = sendnotification($argsEmail);
-				if ($enviarEmail && $sendnotification) {
-					$jsonResponse['status'] = 'salvo';
-				}
 			}
 		}
 	}

@@ -39,7 +39,7 @@
 												<small id="userHelp" class="form-text text-muted"></small>
 											</div>
 											<div class="form-group">
-												<label for="exampleInputSenha"><?php echo langVar('page-suporte-email-usuario'); ?></label>
+												<label for="exampleInputSenha"><?php echo langVar('page-suporte-email-senha'); ?></label>
 												<input type="password" class="form-control" id="get-senha" placeholder="Digite sua senha">
 											</div>
 											<input type="hidden" id="get-token" name="token" value="<?php echo $tokenAtual; ?>">

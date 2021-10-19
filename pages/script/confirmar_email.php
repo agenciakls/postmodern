@@ -1,5 +1,6 @@
 <?php 
 $campos = array("usuario", "senha", "token");
+$jsonResponse = array('status' => 'erro', 'response' => 'houve algum erro');
 if (verif_campo($campos)) {
 	defineCampo($campos);
 	$verificarId = mysqli_query($conectar, sprintf("SELECT cliente_id FROM token_email WHERE token='%s' AND status='ativo'", $token));
@@ -16,21 +17,19 @@ if (verif_campo($campos)) {
 							$usuario = $impUser['usuario'];
 							$loggon = logarUsuario($usuario, $senha); 
 							if ($loggon) {
-								echo 'conectado';
+								$jsonResponse['status'] = 'conectado';
 							} 
-							else { echo 'nao_conectado'; }
+							else { $jsonResponse['status'] = 'nao_conectado'; }
 						}
-						else { echo 'nao_encontrado'; }
+						else { $jsonResponse['status'] = 'nao_encontrado'; }
 					}
-					else { echo 'nao_conectado'; }
+					else { $jsonResponse['status'] = 'nao_conectado'; }
 				}
 			}
-			else { echo 'nao_encontrado'; }
+			else { $jsonResponse['status'] = 'nao_encontrado'; }
 		}
 	}
-	else { echo 'nao_encontrado'; }
+	else { $jsonResponse['status'] = 'nao_encontrado'; }
 }
-else {
-	echo 'erro';
-}
+echo json_encode($jsonResponse)
 ?>

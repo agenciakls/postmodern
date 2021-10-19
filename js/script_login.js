@@ -26,11 +26,12 @@ var acaoLogin = function () {
 		usuario: usuario,
 		senha: senha
 	}, function (rLogin){
-		if (rLogin == 'conectado') {
+		responseLogin = JSON.parse(rLogin);
+		if (responseLogin.status == 'conectado') {
 			window.location = window.basePrincipal + "conta/";
 		}
-		else if (rLogin == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
-		else if (rLogin == 'nao_confirmado') { messageErro('Seu e-mail ainda não foi confirmado!'); }
+		else if (responseLogin.status == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
+		else if (responseLogin.status == 'nao_confirmado') { messageErro('Seu e-mail ainda não foi confirmado!'); }
 		else { messageErro('Houve algum erro, tente novamente mais tarde!'); }
 	});
 }

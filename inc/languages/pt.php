@@ -248,7 +248,7 @@ $GLOBALS['lang'] = array(
     'page-agendamento-faixas' => 'Quantas faixas terá o seu album?',
     'page-agendamento-mixagens' => 'Mixagens',
     'page-agendamento-alternativas' => 'Versões Alternativas',
-    'page-agendamento-adicional' => 'Adicional Masterização para Vinyl',
+    'page-agendamento-adicional-vinyl' => 'Adicional Masterização para Vinyl',
     'page-agendamento-sessao' => 'Sua sessão ',
     'page-agendamento-data' => 'Selecionar data',
     'page-agendamento-data-horario' => 'Data e Horário para o serviço:',
@@ -319,7 +319,7 @@ $GLOBALS['lang'] = array(
     'page-agendamento-cidade' => 'Cidade',
     'page-agendamento-bairro' => 'Bairro',
     'page-agendamento-cep' => 'CEP',
-    'page-agendamento-finalizar-cadastro' => '',
+    'page-agendamento-finalizar-cadastro' => 'Finalizar cadastro',
     'page-agendamento-informe-nome' => 'Informe o seu Nome',
     'page-agendamento-informe-sobrenome' => 'Informe o seu Sobrenome',
     'page-agendamento-informe-telefone' => 'Insira o seu telefone',
@@ -497,7 +497,69 @@ $GLOBALS['lang'] = array(
     'page-suporte-senha-para-recuperar' => 'Para recuperar a senha insira os dados abaixo e enviaremos um link para você recuperar sua senha.',
     'page-suporte-senha-informe-email' => 'Insira seu usuário e e-mail',
     'page-suporte-senha-recuperar' => 'Recuperar Senha',
+
+
+    // E-MAIL SEND
     
+    'sendmail-subject-email' => 'Cadastro Realizado com sucesso',
+    'sendmail-content-email-1' => 'Obrigado por escolher o Post Modern Mastering para cuidar de sua música. Esperamos que aproveite a experiência.',
+    'sendmail-content-email-2' => 'Nosso sistema envia notificações automatizadas de todas as ações realizadas em cada conta certificada para eliminar chamadas telefônicas e e-mails manuais. Quando o projeto estiver pronto, cada cliente recebe uma notificação para fazer o download dos arquivos masterizados em sua conta certificada.',
+    'sendmail-content-email-3' => 'Clique no link abaixo para confirmar seu e-mail: ',
+    'sendmail-content-email-4' => 'Se não foi você que fez o cadastro não clique no link e nenhuma alteração será feita...',
+    
+    'sendmail-subject-senha' => 'Recuperar Senha',
+    'sendmail-content-senha-1' => 'Você enviou para seu e-mail um link de pedido de alteração de senha, para alterar sua senha entre no link abaixo e digite seu nome de usuário e senha.',
+    'sendmail-content-senha-2' => 'Clique no link abaixo: ',
+    'sendmail-content-senha-3' => 'Se houver algum problema entre em contato imediatamente para que possa ser resolvido',
+
+    'sendmail-subject-upload' => 'Arquivos Enviados com Sucesso',
+    'sendmail-content-upload-1' => 'Olá ',
+    'sendmail-content-upload-2' => 'Seus arquivos foram recebidos com sucesso em sua conta certificada.',
+    'sendmail-content-upload-3' => 'Lembramos que o pagamento total do serviço contratado deve ser efetuado até 24 horas antes da data de sua sessão.',
+    'sendmail-content-upload-4' => 'Caso o pagamento não seja confirmado dentro do prazo, um novo agendamento deverá ser feito e estará sujeito å disponibilidade do Engenheiro.',
+    'sendmail-content-upload-5' => 'Link para a página de login',
+
+    'sendmail-subject-download' => 'Você recebeu um arquivo masterizado em sua conta certificada',
+    'sendmail-content-download-1' => 'Olá ',
+    'sendmail-content-download-2' => 'Os arquivos masterizados do seu projeto já estão disponíveis.',
+    'sendmail-content-download-3' => 'Por favor, acesse sua conta certificada para ter acesso aos arquivos.',
+    'sendmail-content-download-4' => 'Link para a página de login',
+    'sendmail-content-download-5' => 'Esperamos ouvir de você em breve.',
+    
+    'sendmail-subject-pagamento' => 'Pagamento Efetuado',
+    'sendmail-content-pagamento-1' => 'Olá ',
+    'sendmail-content-pagamento-2' => 'Você efetuou o pagamento em nosso site, já notificamos ao engenheiro que dê prosseguimento ao processo.',
+
+    'sendmail-subject-descricao' => 'Alteração de Descrição',
+    'sendmail-content-descricao-1' => 'Olá ',
+    'sendmail-content-descricao-2' => 'Você alterou a descriação de um serviço no site. Já recebemos a sua descrição atualizada.',
+
+    // E-MAIL NOTIFICATION
+    
+    'sendnotification-subject-email' => 'Um novo projeto foi adicionado no Sistema.',
+    'sendnotification-content-email-1' => 'Um novo projeto foi adicionado no Sistema.',
+    'sendnotification-content-email-2' => 'Dados do cliente: ',
+    'sendnotification-content-email-3' => 'Link para acesso ao Painel.',
+    
+    'sendnotification-subject-senha' => 'Um cliente fez uma recuperação de senha',
+    'sendnotification-content-senha-1' => 'O cliente ',
+    'sendnotification-content-senha-2' => 'acaba de fazer um pedido de alteração de senha através do site.',
+    
+    'sendnotification-subject-upload' => 'Um novo upload foi realizado na conta de ',
+    'sendnotification-content-upload-1' => 'Um novo upload foi realizado na conta de ',
+    'sendnotification-content-upload-2' => 'Link para acesso ao Painel.',
+    
+    'sendnotification-subject-download' => 'Você acaba de enviar uma faixa masterizada para um cliente',
+    'sendnotification-content-download-1' => 'Você acaba de enviar uma faixa para o cliente: ',
+    
+    'sendnotification-subject-pagamento' => 'Um cliente fez o pagamento no site',
+    'sendnotification-content-pagamento-1' => 'O cliente ',
+    'sendnotification-content-pagamento-2' => 'acaba de efetuar o pagamento através do site. ',
+    
+    'sendnotification-subject-descricao' => 'Um cliente fez a alteração de descrição',
+    'sendnotification-content-descricao-1' => 'O cliente ',
+    'sendnotification-content-descricao-2' => ' alterou a descrição de um serviço, verifique no sistema a descrição. ',
+    'sendnotification-content-descricao-3' => 'Nesses casos pode conter alguma informação importante!',
 
 );
 ?>  

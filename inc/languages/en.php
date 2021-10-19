@@ -248,7 +248,7 @@ $GLOBALS['lang'] = array(
     'page-agendamento-faixas' => 'How many tracks will your album have?',
     'page-agendamento-mixagens' => 'Mixes',
     'page-agendamento-alternativas' => 'Alternative Versions',
-    'page-agendamento-adicional' => 'Additional Mastering for Vinyl',
+    'page-agendamento-adicional-vinyl' => 'Additional Mastering for Vinyl',
     'page-agendamento-sessao' => 'Your session',
     'page-agendamento-data' => 'Select date',
     'page-agendamento-data-horario' => 'Date and Time for service:',
@@ -319,7 +319,7 @@ $GLOBALS['lang'] = array(
     'page-agendamento-cidade' => 'City',
     'page-agendamento-bairro' => 'Neighborhood',
     'page-agendamento-cep' => 'zip',
-    'page-agendamento-finalizar-cadastro' => '',
+    'page-agendamento-finalizar-cadastro' => 'Finish Registration',
     'page-agendamento-informe-nome' => 'Enter your name',
     'page-agendamento-informe-sobrenome' => 'Enter your surname',
     'page-agendamento-informe-telefone' => 'Enter your phone number',
@@ -497,7 +497,67 @@ $GLOBALS['lang'] = array(
     'page-suporte-senha-para-recuperar' => 'To recover your password enter the data below and we will send you a link to recover your password.',
     'page-suporte-senha-informe-email' => 'Enter your username and e-mail',
     'page-suporte-senha-recuperar' => 'Recover Password',
-    
 
+    // E-MAIL SEND
+    
+    'sendmail-subject-email' => 'Subject successful',
+    'sendmail-content-email-1' => 'Thank you for choosing Post Modern Mastering to take care of your music. We hope you enjoy the experience.',
+    'sendmail-content-email-2' => 'Our system sends automated notifications of all actions performed on each certified account to eliminate phone calls and manual emails. When the project is ready, each customer receives a notification to download the mastered files to their certified account.',
+    'sendmail-content-email-3' => 'Click on the link below to confirm your email: ',
+    'sendmail-content-email-4' => 'If you didn\'t register, don\'t click on the link and no changes will be made...',
+    
+    'sendmail-subject-senha' => 'Recover Password',
+    'sendmail-content-senha-1' => 'You have sent a password change request link to your e-mail, to change your password enter the link below and enter your username and password.',
+    'sendmail-content-senha-2' => 'Click on the link below: ',
+    'sendmail-content-senha-3' => 'If there is any problem please contact us immediately so that it can be resolved',
+
+    'sendmail-subject-upload' => 'Files Submitted Successfully',
+    'sendmail-content-upload-1' => 'Hello',
+    'sendmail-content-upload-2' => 'Your files were successfully uploaded to your certified account.',
+    'sendmail-content-upload-3' => 'Please note that full payment for the contracted service must be made up to 24 hours before the date of your session.',
+    'sendmail-content-upload-4' => 'If the payment is not confirmed within the deadline, a new appointment must be made and will be subject to the Engineer\'s availability.',
+    'sendmail-content-upload-5' => 'Link to login page',
+
+    'sendmail-subject-download' => 'You have received a mastered file on your certified account',
+    'sendmail-content-download-1' => 'Hello',
+    'sendmail-content-download-2' => 'Your project\'s mastered files are now available.',
+    'sendmail-content-download-3' => 'Please login to your certified account to access the files.',
+    'sendmail-content-download-4' => 'Link to login page',
+    'sendmail-content-download-5' => 'We hope to hear from you soon.',
+    
+    'sendmail-subject-pagamento' => 'Payment Made',
+    'sendmail-content-pagamento-1' => 'Hello',
+    'sendmail-content-pagamento-2' => 'You have made the payment on our website, we have already notified the engineer to proceed with the process.',
+
+    'sendmail-subject-descricao' => 'Change Description',
+    'sendmail-content-descricao-1' => 'Hello',
+    'sendmail-content-descricao-2' => 'You have changed the description of a service on the website. We have already received your updated description.',
+
+    // E-MAIL NOTIFICATION
+    
+    'sendnotification-subject-email' => 'A new project has been added to the System.',
+    'sendnotification-content-email-1' => 'A new project has been added to the System.',
+    'sendnotification-content-email-2' => 'Customer data: ',
+    'sendnotification-content-email-3' => 'Link to access the Dashboard.',
+    
+    'sendnotification-subject-senha' => 'A client has done a password recovery',
+    'sendnotification-content-senha-1' => 'The customer ',
+    'sendnotification-content-senha-2' => 'you have just made a password change request via the website.',
+    
+    'sendnotification-subject-upload' => 'A new upload has been made to the account of ',
+    'sendnotification-content-upload-1' => 'A new upload has been made to ',
+    'sendnotification-content-upload-2' => 'Link to access the Dashboard.',
+    
+    'sendnotification-subject-download' => 'You have just sent a mastered track to a client',
+    'sendnotification-content-download-1' => 'You have just sent a track to the client: ',
+    
+    'sendnotification-subject-pagamento' => 'A customer made payment on the website',
+    'sendnotification-content-pagamento-1' => 'The customer',
+    'sendnotification-content-pagamento-2' => 'you have just made the payment via the website. ',
+    
+    'sendnotification-subject-descricao' => 'A customer has made a description change',
+    'sendnotification-content-descricao-1' => 'The customer',
+    'sendnotification-content-descricao-2' => ' changed the description of a service, check the description in the system. ',
+    'sendnotification-content-descricao-3' => 'In these cases it may contain some important information!',
 );
 ?>

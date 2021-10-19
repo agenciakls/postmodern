@@ -1,18 +1,18 @@
 <?php
 
 function sendnotification( $args ) {
-//	$args = array(
-//		'type' => 'recuperar_senha',
-//		'destinatario' => array(
-//			'nome' => $impUsuario['nome'],
-//			'email' => $impUsuario['email'],
-//			'token' => $tokenGerado
-//		), 
-//		'remetente' => array(
-//			'nome' => 'Post Modern Mastering', 
-//			'email' => 'no-reply@postmodernmastering.com'
-//		),
-//	);
+	//	$args = array(
+	//		'type' => 'recuperar_senha',
+	//		'destinatario' => array(
+	//			'nome' => $impUsuario['nome'],
+	//			'email' => $impUsuario['email'],
+	//			'token' => $tokenGerado
+	//		), 
+	//		'remetente' => array(
+	//			'nome' => 'Post Modern Mastering', 
+	//			'email' => 'no-reply@postmodernmastering.com'
+	//		),
+	//	);
 
 	// subject
 	// $subject = $subject;
@@ -21,69 +21,69 @@ function sendnotification( $args ) {
 
 	switch ($args['type']) {
 		case 'email': 
-			$subject = 'Um novo projeto foi adicionado no Sistema.';
+			$subject = langVar('sendnotification-subject-email');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Um novo projeto foi adicionado no Sistema.</p>
+				<p>' . langVar('sendnotification-content-email-1') . '</p>
 
-				<br><p> Dados do cliente: ' . $args['destinatario']['nome'] . ' - ' . $args['destinatario']['email'] .'</p>
+				<br><p>' . langVar('sendnotification-content-email-2') . ' ' . $args['destinatario']['nome'] . ' - ' . $args['destinatario']['email'] .'</p>
 				
-				<br /><p><a href="https://postmodernmastering.com/controle">Link para acesso ao Painel.</a></p>
+				<br /><p><a href="https://postmodernmastering.com/controle">' . langVar('sendnotification-content-email-3') . '</a></p>
 			</div>';
 		break;
 		case 'senha': 
-			$subject = 'Um cliente fez uma recuperação de senha';
+			$subject = langVar('sendnotification-subject-senha');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>O cliente ' . $args['destinatario']['nome'] . ' acaba de fazer um pedido de alteração de senha através do site.</p>
+				<p>' . langVar('sendnotification-content-senha-1') . ' ' . $args['destinatario']['nome'] . ' ' . langVar('sendnotification-content-senha-2') . '</p>
 			</div>';
 		break;
 		case 'upload': 
-			$subject = 'Um novo upload foi realizado na conta de ' . $args['destinatario']['nome'] . ' - ' . $args['destinatario']['email'];
+			$subject = langVar('sendnotification-subject-upload') . ' ' . $args['destinatario']['nome'] . ' - ' . $args['destinatario']['email'];
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Um novo upload foi realizado na conta de ' . $args['destinatario']['nome'] . '.</p>
-				<br /><p><a href="https://postmodernmastering.com/controle">Link para acesso ao Painel.</a></p>
+				<p>' . langVar('sendnotification-content-upload-1') . ' ' . $args['destinatario']['nome'] . '.</p>
+				<br /><p><a href="https://postmodernmastering.com/controle">' . langVar('sendnotification-content-upload-2') . '</a></p>
 			</div>';
 		break;
 		case 'download': 
-			$subject = 'Você acaba de enviar uma faixa masterizada para um cliente';
+			$subject = langVar('sendnotification-subject-download');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Você acaba de enviar uma faixa para o cliente: ' . $args['destinatario']['nome'] . '</p>
+				<p>' . langVar('sendnotification-content-download-1') . ' ' . $args['destinatario']['nome'] . '</p>
 			</div>';
 		break;
 		case 'pagamento': 
-			$subject = 'Um cliente fez o pagamento no site';
+			$subject = langVar('sendnotification-subject-pagamento');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>O cliente ' . $args['destinatario']['nome'] . ' acaba de efetuar o pagamento através do site.</p>
+				<p>' . langVar('sendnotification-content-pagamento-1') . ' ' . $args['destinatario']['nome'] . ' ' . langVar('sendnotification-content-pagamento-2') . '</p>
 			</div>';
 		break;
 		case 'descricao': 
-			$subject = 'Um cliente fez a alteração de descrição';
+			$subject = langVar('sendnotification-subject-descricao');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>O cliente ' . $args['destinatario']['nome'] . ' alterou a descrição de um serviço, verifique no sistema a descrição.</p>
-				<p>Nesses casos pode conter alguma informação importante!</p>
+				<p>' . langVar('sendnotification-content-descricao-1') . ' ' . $args['destinatario']['nome'] . ' ' . langVar('sendnotification-content-descricao-2') . '</p>
+				<p>' . langVar('sendnotification-content-descricao-3') . '</p>
 			</div>';
 		break;
 	}
@@ -123,7 +123,7 @@ function sendnotification( $args ) {
 
 	// Additional headers
 	$headers .= 'To: ' . 'André Dias <' . $to . '>' . "\r\n";
-	$headers .= 'From: ' . $args['remetente']['nome'] . ' <' . $args['remetente']['email'] . '>' . "\r\n";
+	$headers .= 'From: ' . $args['remetente']['nome'] . ' <no-reply@postmodernmastering.com>' . "\r\n";
 //	$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
 //	$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 

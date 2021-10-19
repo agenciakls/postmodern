@@ -31,11 +31,12 @@ var acaoLogin = function () {
 		senha: senha,
 		token: token
 	}, function (rLogin){
-		if (rLogin == 'conectado') {
+		var responseLogin = JSON.parse(rLogin);
+		if (responseLogin.status == 'conectado') {
 			window.location = window.basePrincipal + "conta/";
 		}
-		else if (rLogin == 'nao_encontrado') { messageErro('Não foi possível identificar seus dados, entre em contato.'); }
-		else if (rLogin == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
+		else if (responseLogin.status == 'nao_encontrado') { messageErro('Não foi possível identificar seus dados, entre em contato.'); }
+		else if (responseLogin.status == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
 		else { messageErro('Houve algum erro, tente novamente mais tarde!'); }
 	});
 }

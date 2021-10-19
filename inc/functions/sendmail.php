@@ -1,18 +1,18 @@
 <?php
 
 function sendmail( $args ) {
-//	$args = array(
-//		'type' => 'recuperar_senha',
-//		'destinatario' => array(
-//			'nome' => $impUsuario['nome'],
-//			'email' => $impUsuario['email'],
-//			'token' => $tokenGerado
-//		), 
-//		'remetente' => array(
-//			'nome' => 'Post Modern Mastering', 
-//			'email' => 'no-reply@postmodernmastering.com'
-//		),
-//	);
+	//	$args = array(
+	//		'type' => 'recuperar_senha',
+	//		'destinatario' => array(
+	//			'nome' => $impUsuario['nome'],
+	//			'email' => $impUsuario['email'],
+	//			'token' => $tokenGerado
+	//		), 
+	//		'remetente' => array(
+	//			'nome' => 'Post Modern Mastering', 
+	//			'email' => 'no-reply@postmodernmastering.com'
+	//		),
+	//	);
 
 	// subject
 	// $subject = ($args['titulo']) ? $args['titulo'] : $subject;
@@ -21,80 +21,80 @@ function sendmail( $args ) {
 	global $basePrincipal;
 	switch ($args['type']) {
 		case 'email': 
-			$subject = 'Cadastro Realizado com sucesso';
+			$subject = langVar('sendmail-subject-email');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Obrigado por escolher o Post Modern Mastering para cuidar de sua música. Esperamos que aproveite a experiência.</p>
-				<p>Nosso sistema envia notificações automatizadas de todas as ações realizadas em cada conta certificada para eliminar chamadas telefônicas e e-mails manuais. Quando o projeto estiver pronto, cada cliente recebe uma notificação para fazer o download dos arquivos masterizados em sua conta certificada.</p>
-				<p>Clique no link abaixo para confirmar seu e-mail: <br /> <a href="' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '" target="_blank">' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '</a></p>
-				<br /><p><em>Se não foi você que fez o cadastro não clique no link e nenhuma alteração será feita…</em></p>
+				<p>' . langVar('sendmail-content-email-1') . '</p>
+				<p>' . langVar('sendmail-content-email-2') . '</p>
+				<p>' . langVar('sendmail-content-email-3') . ' <br /> <a href="' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '" target="_blank">' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '</a></p>
+				<br /><p><em>' . langVar('sendmail-content-email-4') . '</em></p>
 			</div>';
 		break;
 		case 'senha': 
-			$subject = 'Recuperar Senha';
+			$subject = langVar('sendmail-subject-senha');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				<p>Olá ' . $args['destinatario']['nome'] . ',</p>
-				<p>Você enviou para seu e-mail um link de pedido de alteração de senha, para alterar sua senha entre no link abaixo e digite seu nome de usuário e senha.</p>
-				<p>Clique no link abaixo: <br /> <a href="' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '" target="_blank">' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '</a></p>
-				<p>Se houver algum problema entre em contato imediatamente para que possa ser resolvido</p>
+				<p>' . langVar('sendmail-content-senha-1') . '</p>
+				<p>' . langVar('sendmail-content-senha-2') . '<br /> <a href="' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '" target="_blank">' . $basePrincipal . 'suporte/email?tkn=' . $args['destinatario']['token'] . '</a></p>
+				<p>' . langVar('sendmail-content-senha-3') . '</p>
 			</div>';
 		break;
 		case 'upload': 
-			$subject = 'Arquivos Enviados com Sucesso';
+			$subject = langVar('sendmail-subject-upload');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>“Olá ' . $args['destinatario']['nome'] . ',</p>
-				<p>Seus arquivos foram recebidos com sucesso em sua conta certificada.</p>
-				<p>Lembramos que o pagamento total do serviço contratado deve ser efetuado até 24 horas antes da data de sua sessão.</p>
-				<p>Caso o pagamento não seja confirmado dentro do prazo, um novo agendamento deverá ser feito e estará sujeito å disponibilidade do Engenheiro.</p>
+				<p>“' . langVar('sendmail-content-upload-1') . ' ' . $args['destinatario']['nome'] . ',</p>
+				<p>' . langVar('sendmail-content-upload-2') . '</p>
+				<p>' . langVar('sendmail-content-upload-3') . '</p>
+				<p>' . langVar('sendmail-content-upload-4') . '</p>
 
-				<br /><p><a href="https://postmodernmastering.com/login">Link para a página de login</a></p>
+				<br /><p><a href="https://postmodernmastering.com/login">' . langVar('sendmail-content-upload-4') . '</a></p>
 			</div>';
 		break;
 		case 'download': 
-			$subject = 'Você recebeu um arquivo masterizado em sua conta certificada';
+			$subject = langVar('sendmail-subject-download');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Olá ' . $args['destinatario']['nome'] . ',</p>
-				<p>Os arquivos masterizados do seu projeto já estão disponíveis.</p>
-				<p>Por favor, acesse sua conta certificada para ter acesso aos arquivos.</p>
-				<br /><p><a href="https://postmodernmastering.com/login">Link para a página de login</a></p>
-				<br /><p>Esperamos ouvir de você em breve.</p>
+				<p>' . langVar('sendmail-content-upload-1') . ' ' . $args['destinatario']['nome'] . ',</p>
+				<p>' . langVar('sendmail-content-upload-2') . '</p>
+				<p>' . langVar('sendmail-content-upload-3') . '</p>
+				<br /><p><a href="https://postmodernmastering.com/login">' . langVar('sendmail-content-upload-4') . '</a></p>
+				<br /><p>' . langVar('sendmail-content-upload-5') . '</p>
 			</div>';
 		break;
 		case 'pagamento': 
-			$subject = 'Pagamento Efetuado';
+			$subject = langVar('sendmail-subject-pagamento');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Olá ' . $args['destinatario']['nome'] . ',</p>
-				<p>Você efetuou o pagamento em nosso site, já notificamos ao engenheiro que dê prosseguimento ao processo.</p>
+				<p>' . langVar('sendmail-content-pagamento-1') . ' ' . $args['destinatario']['nome'] . ',</p>
+				<p>' . langVar('sendmail-content-pagamento-1') . '</p>
 			</div>';
 		break;
 		case 'descricao': 
-			$subject = 'Alteração de Descrição';
+			$subject = langVar('sendmail-subject-descricao');
 			$dataContent = '
 			<div style="background-color: #191919 !important; color: #efefef; padding: 19px 22px; font-size: 23px; font-family: \'sans-serif\', \'Trebuchet MS\';">
 				' . $subject . '
 			</div>
 			<div style="background-color: #f8f9fa; padding: 19px 22px; font-family: \'sans-serif\', \'Trebuchet MS\';">
-				<p>Olá ' . $args['destinatario']['nome'] . ',</p>
-				<p>Você alterou a descriação de um serviço no site. Já recebemos a sua descrição atualizada.</p>
+				<p>' . langVar('sendmail-content-descricao-1') . ' ' . $args['destinatario']['nome'] . ',</p>
+				<p>' . langVar('sendmail-content-descricao-1') . '</p>
 			</div>';
 		break;
 	}
@@ -133,7 +133,7 @@ function sendmail( $args ) {
 
 	// Additional headers
 	$headers .= 'To: ' . $args['destinatario']['nome'] . ' <' . $args['destinatario']['email'] . '>' . "\r\n";
-	$headers .= 'From: ' . $args['remetente']['nome'] . ' <' . $args['remetente']['email'] . '>' . "\r\n";
+	$headers .= 'From: ' . $args['remetente']['nome'] . ' <no-reply@postmodernmastering.com>' . "\r\n";
 //	$headers .= 'Cc: birthdayarchive@example.com' . "\r\n";
 //	$headers .= 'Bcc: birthdaycheck@example.com' . "\r\n";
 
