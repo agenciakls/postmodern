@@ -18,3 +18,4 @@ function returnSetting($nameField) {
 		else { return false; }
 	}
 }
+?>

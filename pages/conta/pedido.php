@@ -52,7 +52,7 @@
 									<h5 class="card-title"><?php echo langVar('page-conta-pedido-pagamento'); ?></h5>
 									<p><strong><?php echo langVar('page-conta-pedido-status-pagamento'); ?> </strong> <?php $dataPay = relationData($impPedido['pagamento_status']); echo $dataPay['titulo']; ?>
 									</p>
-									<p><strong><?php echo langVar('page-conta-pedido-valor'); ?> </strong> R$ <?php echo number_format($impPedido['valor'], 2, ',', '.'); ?></p>
+									<p><strong><?php echo langVar('page-conta-pedido-valor'); ?> </strong> <?php echo $impPedido['moeda']; ?> <?php echo number_format($impPedido['valor'], 2, ',', '.'); ?></p>
 									<?php 
 									if ($impPedido['pagamento_status'] == 1 || $impPedido['pagamento_status'] == 4) {
 										?>

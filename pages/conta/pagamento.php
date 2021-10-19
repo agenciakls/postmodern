@@ -30,7 +30,7 @@
 								<div class="col-md-12">
 									<p><?php echo langVar('page-conta-pagamento-obrigado'); ?><?php echo $impPedido['artista']; ?> <?php echo langVar('page-conta-pagamento-e'); ?> <?php echo $impPedido['projeto']; ?> <?php echo langVar('page-conta-pagamento-with'); ?></p>
 									<h5 class="card-title"><?php echo langVar('page-conta-pagamento-pagamento'); ?> <small class="text-muted"><?php $dataPay = relationData($impPedido['pagamento_status']); echo $dataPay['titulo']; ?></small></h5>
-									<p><strong><?php echo langVar('page-conta-pagamento-valor'); ?> </strong> R$ <?php echo number_format($impPedido['valor'], 2, ',', '.'); ?></p>
+									<p><strong><?php echo langVar('page-conta-pagamento-valor'); ?> </strong> <?php echo $impPedido['moeda']; ?> <?php echo number_format($impPedido['valor'], 2, ',', '.'); ?></p>
 									<?php 
 									if ($impPedido['pagamento_status'] == 1 || $impPedido['pagamento_status'] == 4) {
 										?>

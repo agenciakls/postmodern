@@ -164,13 +164,13 @@
                                         </td>
                                         <td width="15%" data-th="Valor Unit.">
                                             <span class="nowrap">
-                                                R$ <?= number_format($valor, 2, ',', '.'); ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($valor, 2, ',', '.'); ?>
                                             </span>
                                         </td>
                                         <td data-th="Qtd"><?php echo $qtd; ?></td>
                                         <td width="15%" data-th="Total">
                                             <span class="nowrap">
-                                                R$ <?= number_format($total, 2, ',', '.') ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($total, 2, ',', '.') ?>
                                             </span>
                                         </td>
                                     </tr>
@@ -189,13 +189,13 @@
                                         </td>
                                         <td width="15%" data-th="Valor Unit.">
                                             <span class="nowrap">
-                                                R$ <?= number_format($valor, 2, ',', '.'); ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($valor, 2, ',', '.'); ?>
                                             </span>
                                         </td>
                                         <td data-th="Qtd"><?php echo $qtd; ?></td>
                                         <td width="15%" data-th="Total">
                                             <span class="nowrap">
-                                                R$ <?= number_format($total, 2, ',', '.') ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($total, 2, ',', '.') ?>
                                             </span>
                                         </td>
                                     </tr>
@@ -214,13 +214,13 @@
                                         </td>
                                         <td width="15%" data-th="Valor Unit.">
                                             <span class="nowrap">
-                                                R$ <?= number_format($valor, 2, ',', '.'); ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($valor, 2, ',', '.'); ?>
                                             </span>
                                         </td>
                                         <td data-th="Qtd"><?php echo $qtd; ?></td>
                                         <td width="15%" data-th="Total">
                                             <span class="nowrap">
-                                                R$ <?= number_format($total, 2, ',', '.') ?>
+                                                <?php echo $impPedido['moeda']; ?> <?= number_format($total, 2, ',', '.') ?>
                                             </span>
                                         </td>
                                     </tr>
@@ -231,7 +231,7 @@
                         </table>
 
                         <div align="right" class="order-money-totals">
-                            <p><b><?php echo langVar('page-conta-recibo-total-final'); ?></b> R$ <span class="total"><?php echo number_format($totalFinal, 2, ',', '.') ?></span></p>
+                            <p><b><?php echo langVar('page-conta-recibo-total-final'); ?></b> <?php echo $impPedido['moeda']; ?> <span class="total"><?php echo number_format($totalFinal, 2, ',', '.') ?></span></p>
                         </div>
                         <div class="clear"></div>
                     </div>

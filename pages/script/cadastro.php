@@ -1,9 +1,9 @@
 <?php 
 $campos = array("nome", "sobrenome", "usuario", "email", "telefone", "celular", "senha", "endereco", "pais", "estado", "cidade", "bairro", "cep", "email_status");
 $_POST['email_status'] = 'nao_confirmado';
+$jsonResponse = array('status' => 'erro', 'response' => 'houve algum erro');
 if (verif_campo($campos)) {
 	defineCampo($campos);
-
 	$verificarUsuario = mysqli_query($conectar, sprintf("SELECT * FROM clientes WHERE usuario='%s'", $usuario));
 	$verificarEmail = mysqli_query($conectar, sprintf("SELECT * FROM clientes WHERE email='%s'", $email));
 	if ( quantityData($verificarUsuario) == 1 ) { echo 'usuario'; }
@@ -31,18 +31,12 @@ if (verif_campo($campos)) {
 				$enviarEmail = sendmail($argsEmail);
 				$sendnotification = sendnotification($argsEmail);
 				if ($enviarEmail && $sendnotification) {
-					echo 'salvo';
+					$jsonResponse['status'] = 'salvo';
 				}
-				else {echo 'nao_enviado';}
-			}
-			else {
-				echo 'nao_gerado';
 			}
 		}
-		else { echo 'nao_salvo'; }
 	}
 }
-else {
-	echo 'erro';
-}
+echo json_encode($jsonResponse);
+exit();
 ?>

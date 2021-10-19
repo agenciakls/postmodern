@@ -39,9 +39,18 @@
 	<!-- JAVASCRIPT -->
 	<script>
 	var basePrincipal = '<?php echo $basePrincipal; ?>';
-	var valorMixe = <?php echo number_format(returnSetting('mixe') / langVar('mixe'), 2); ?>;
-	var valorVersion = <?php echo number_format(returnSetting('versao') / langVar('version'), 2); ?>;
-	var valorVinyl = <?php echo number_format(returnSetting('vinyl') / langVar('vinyl'), 2); ?>;
+	<?php
+	$whatLang = whatLang();
+	switch ($whatLang) {
+		case 'pt': $mixe = 'mixe'; $versao = 'versao'; $vinyl = 'vinyl'; break;
+		case 'en': $mixe = 'mixe_en'; $versao = 'versao_en'; $vinyl = 'vinyl_en'; break;
+		case 'es': $mixe = 'mixe_es'; $versao = 'versao_es'; $vinyl = 'vinyl_es'; break;
+		default:  $mixe  = 'mixe'; $versao = 'versao'; $vinyl = 'vinyl';
+	}
+	?>
+	var valorMixe = <?php echo number_format(returnSetting($mixe), 2, '.', ''); ?>;
+	var valorVersion = <?php echo number_format(returnSetting($versao), 2, '.', ''); ?>;
+	var valorVinyl = <?php echo number_format(returnSetting($vinyl), 2, '.', ''); ?>;
 	var moedaValor = '<?php echo langVar('moeda'); ?>';
 	</script>
 	<script type="text/javascript" src="<?php echo baseUrl(); ?>js/jquery.js"></script>
@@ -87,14 +96,10 @@ if (!$index || $caminhoCompleto[0] == 'inicio') {
 					<li><a href="<?php echo baseUrl(); ?>agendamento"><?php echo langVar('menu-agende-sessao'); ?></a></li>
 					<?php
 					if (isset($usuarioAtual)) {
-						?>
-						<li><a href="<?php echo baseUrl(); ?>conta"><i class="fa fa-user-circle"></i> <?php echo langVar('menu-conta'); ?></a></li>
-						<?php 
+						?><li><a href="<?php echo baseUrl(); ?>conta"><i class="fa fa-user-circle"></i> <?php echo langVar('menu-conta'); ?></a></li><?php 
 					}
 					else {
-						?>
-						<li><a href="<?php echo baseUrl(); ?>login"><i class="fas fa-sign-in-alt"></i> <?php echo langVar('menu-entra'); ?></a></li>
-						<?php 
+						?><li><a href="<?php echo baseUrl(); ?>login"><i class="fas fa-sign-in-alt"></i> <?php echo langVar('menu-entra'); ?></a></li><?php 
 					}
 					?>
 					<li><a href="https://www.facebook.com/PostModernMastering/"><i class="fab fa-facebook fa-2x" style="margin: -4px 0px;"></i></a></li>

@@ -10,7 +10,6 @@
 	<!-- FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Great+Vibes&amp;subset=latin-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<!--	<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=Roboto|Lato|Open+Sans|Quicksand" rel="stylesheet">
 	
 	<!-- STYLES -->
@@ -66,13 +65,11 @@
 		<div class="container d-flex justify-content-between">
 			<a href="<?php echo baseUrl(); ?>" class="navbar-brand d-flex align-items-center">
 				<h2 class="title-logo">POST MODERN MASTERING</h2>
-				<!-- <img src="<?php echo baseUrl(); ?>images/title_logo_3.png" height="50" alt=""> -->
 			</a>
 			<nav class="navbar navbar-dark bg-dark box-shadow fixed-top">
 				<div class="container d-flex justify-content-between">
 					<a href="<?php echo baseUrl(); ?>" class="navbar-brand d-flex align-items-center">
 						<h2 class="title-logo">POST MODERN MASTERING</h2>
-						<!-- <img src="<?php echo baseUrl(); ?>images/title_logo_3.png" height="50" alt=""> -->
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>

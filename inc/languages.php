@@ -30,6 +30,11 @@ function langVar($langVar = '') {
     return $resultVar;
 }
 
+function whatLang() {
+    $lang = (isset($_COOKIE['l'])) ? $_COOKIE['l'] : 'pt';
+    return $lang;
+}
+
 if (isset($_GET['l'])) { getLang($_GET['l']); }
 else if (isset($_COOKIE['l'])) { reqLang($_COOKIE['l']); }
 else { getLang(); }

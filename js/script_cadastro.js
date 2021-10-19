@@ -209,6 +209,9 @@ var acaoLogin = function () {
 	// ARTISTA E PROJETO
 	var artista = $("#get-artista").val();
 	var projeto = $("#get-projeto").val();
+	
+	var novo_moeda = window.moedaValor;
+
 	$.post(window.basePrincipal + 'script/login/', {
 		usuario: usuario,
 		senha: senha,
@@ -218,13 +221,15 @@ var acaoLogin = function () {
 		data: dataHora,
 		dataprazo: dataHoraPrazo,
 		artista: artista,
-		projeto: projeto
+		projeto: projeto,
+		moeda: novo_moeda
 	}, function (rLogin){
-		if (rLogin == 'conectado') { 
+		responseLogin = JSON.parse(rLogin);
+		if (responseLogin.status == 'conectado') { 
 			messageErro('Dados salvos com sucesso, você será redirecionado!', 'success');
 			window.location = window.basePrincipal + "conta/";
 		}
-		else if (rLogin == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
+		else if (responseLogin.status == 'nao_conectado') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
 		else { messageErro('Houve algum erro, tente novamente mais tarde!'); }
 	});
 }
@@ -282,15 +287,16 @@ var acaoCadastro = function () {
 		artista: artista,
 		projeto: projeto,
 		moeda: novo_moeda,
-	}, function (rLogin){
-		if (rLogin == 'salvo') { 
+	}, function (rCadastro){
+		var responseCadastro = JSON.parse(rCadastro);
+		if (responseCadastro.status == 'salvo') { 
 			messageErro('Dados salvos com sucesso, você será redirecionado!', 'success');
 			window.location = window.basePrincipal + "cadastro/";
 		}
-		else if (rLogin == 'nao_salvo') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
-		else if (rLogin == 'usuario') { messageErro('O nome de usuário já existe em nosso sistema.'); }
-		else if (rLogin == 'email') { messageErro('O E-mail já existe em nosso sistema.'); }
-		else if (rLogin == 'nao_conectado') { messageErro('Houve algum problema, entre em contato para resolver o problema.'); }
+		else if (responseCadastro.status == 'nao_salvo') { messageErro('Usuário ou Senha inválido, tente novamente.'); }
+		else if (responseCadastro.status == 'usuario') { messageErro('O nome de usuário já existe em nosso sistema.'); }
+		else if (responseCadastro.status == 'email') { messageErro('O E-mail já existe em nosso sistema.'); }
+		else if (responseCadastro.status == 'nao_conectado') { messageErro('Houve algum problema, entre em contato para resolver o problema.'); }
 		else { messageErro('Houve algum erro, tente novamente mais tarde!'); }
 	});
 }
@@ -318,8 +324,9 @@ var salvarMixes = function () {
 		artista: artista,
 		projeto: projeto,
 		moeda: novo_moeda,
-	}, function (rLogin){
-		if (rLogin == 'salvo') { 
+	}, function (rMixe){
+		var responseMixe = JSON.parse(rMixe);
+		if (responseMixe.status == 'salvo') { 
 			returnSalvar = true;
 		}
 	});

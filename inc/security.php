@@ -1,6 +1,4 @@
 <?php
-
-
 $localhost = 'localhost';
 $usuario = 'andremastering_user';
 $senha = 'andremasteringbd@1234';

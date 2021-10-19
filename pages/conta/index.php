@@ -18,7 +18,7 @@
 									</div>
 									<div class="card-body">
 										<h5 class="card-title"><?php echo $impPedidos['artista']; ?> <small class="text-muted"><?php echo $impPedidos['projeto']; ?></small></h5>
-										<h6>R$ <?php echo number_format($impPedidos['valor'], 2, ',', '.'); ?></h6>
+										<h6><?php echo $impPedidos['moeda']; ?> <?php echo number_format($impPedidos['valor'], 2, ',', '.'); ?></h6>
 										<p class="card-text"><strong><?php echo langVar('page-conta-home-status'); ?></strong> <?php $situacao = relationData($impPedidos['situacao']); echo $situacao['titulo']; ?>  </p>
 										<a href="<?php echo baseUrl(); ?>conta/pedido?p=<?php echo $impPedidos['id']; ?>"><button class="btn-post right"><?php echo langVar('page-conta-home-ver-detalhes'); ?></button></a>
 									</div>

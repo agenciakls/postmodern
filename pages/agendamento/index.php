@@ -365,4 +365,4 @@
 		</div>
 	</div>
 </main>
-<script src="<?php echo baseUrl(); ?>js/script_cadastro.js"></script>
+<script src="<?php echo baseUrl(); ?>js/script_cadastro.js?v=3.1.6"></script>

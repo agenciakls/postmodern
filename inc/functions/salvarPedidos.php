@@ -1,6 +1,6 @@
 <?php 
 function salvarPedidos($idCliente) {
-	$campos = array("mixes", "versoes", "vinyl", "data", "dataprazo", "artista", "projeto");
+	$campos = array("mixes", "versoes", "vinyl", "data", "dataprazo", "artista", "projeto", "moeda");
 	$GLOBALS['campos'] = $campos;
 	if (verif_campo($campos)) {
 		defineCampo($campos);

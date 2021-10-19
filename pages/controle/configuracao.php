@@ -55,6 +55,51 @@ function printLabel($title, $label) {
 					</div>
 				</div>
 			</div>
+			
+			<h5>Base de Valores (Inglês em Dólar)</h5>
+			<div class="row pb-3">
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Mixe', 'mixe_en'); ?>
+					<div class="invalid-feedback">
+						Valid first name is required.
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Versão', 'versao_en'); ?>
+					<div class="invalid-feedback">
+						Valid last name is required.
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Vinyl', 'vinyl_en'); ?>
+					<div class="invalid-feedback">
+						Valid last name is required.
+					</div>
+				</div>
+			</div>
+			
+			<h5>Base de Valores (Espanhol em Dólar)</h5>
+			<div class="row pb-3">
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Mixe', 'mixe_es'); ?>
+					<div class="invalid-feedback">
+						Valid first name is required.
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Versão', 'versao_es'); ?>
+					<div class="invalid-feedback">
+						Valid last name is required.
+					</div>
+				</div>
+				<div class="col-md-4 mb-3">
+					<?php printLabel('Valor p/ Vinyl', 'vinyl_es'); ?>
+					<div class="invalid-feedback">
+						Valid last name is required.
+					</div>
+				</div>
+			</div>
+
 			<h5>Chave de Integração - Paypal</h5>
 			<div class="row pb-3">
 				<div class="col-md-6 mb-3">

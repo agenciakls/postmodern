@@ -1,5 +1,6 @@
 <?php 
 $campos = array("usuario", "senha");
+$jsonResponse = array('status' => 'erro', 'response' => 'Houve algum erro');
 if (verif_campo($campos)) {
 	defineCampo($campos);
 	$verifUser = mysqli_query($conectar, sprintf("SELECT * FROM clientes WHERE usuario='%s' && senha='%s' OR email='%s' && senha='%s'", $usuario, $senha, $usuario, $senha));
@@ -10,16 +11,11 @@ if (verif_campo($campos)) {
 				$usuario = $impUser['usuario'];
 				$loggon = logarUsuario($usuario, $senha); 
 				if ($loggon) {
-					echo 'conectado';
+					$jsonResponse['status'] = 'conectado';
 				} 
-				else { echo 'nao_conectado'; }
 			}
-			else { echo 'nao_confirmado'; }
 		}
 	}
-	else { echo 'nao_conectado'; }
 }
-else {
-	echo 'erro';
-}
+echo json_encode($jsonResponse);
 ?>
