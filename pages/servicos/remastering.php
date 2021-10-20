@@ -15,6 +15,15 @@
 			<div class="row content-mixagens">
 				<div class="col-md-12 set-content">
 					<?php echo langVar('page-servicos-remastering-content'); ?>
+					
+					<a href="https://links.altafonte.com/yoteamo_" target="_blank"><img src="<?php echo baseUrl(); ?>images/capa-timmaia.jpg" class="img-fluid" width="100%" alt=""></a>
+					<br>
+					<br>
+					<a href="https://www.discogs.com/pt_BR/Djavan-Obra-Completa-De-1976-a-2010/release/13679548" target="_blank"><img src="<?php echo baseUrl(); ?>images/djavan-remastered.jpg" class="img-fluid" width="100%" alt=""></a>
+					<br>
+					<br>
+					
+					<img src="<?php echo baseUrl(); ?>images/IMG_5207.JPG" class="img-fluid" width="100%" alt="">
 				</div>
 			</div>
 		</div>

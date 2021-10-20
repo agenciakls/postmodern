@@ -210,30 +210,12 @@ $GLOBALS['lang'] = array(
         <h5> <strong> Procesos Plangent </strong> <strong> ® </strong> </h5>
         <br>
             <p> Post Modern Mastering también ofrece transferencias utilizando el sistema <strong> Plangent Processes® </strong> en nuestro <strong> ATR 102 </strong>. Un sistema híbrido que combina un headblock con un cabezal de reproducción, electrónica analógica y un sistema DSP único, capaz de llevar a cabo un proceso particular de corrección de wow y flutter e imperfecciones generadas en el proceso mecánico de reproducción de la cinta analógica, además de problemas. causado por la acción del clima y la mala conservación. </p>
-            <p> * Los proyectos se pueden entregar en una amplia gama de formatos. WAV PCM, DSD, vinilo, cinta analógica de alta resolución, etc. </p>
-            <a href="https://links.altafonte.com/yoteamo_" target="_blank"> <img src = "<? php echo baseUrl ();?> images / capa-timmaia.jpg" class = "img -fluid "width =" 100% "alt =" "> </a>
-            <br>
-            <br>
-            <a href="https://www.discogs.com/en_BR/Djavan-Obra-Completa-De-1976-a-2010/release/13679548" target="_blank"> <img src = "<? php echo baseUrl ();?> images / djavan-remastered.jpg "class =" img-fluid "width =" 100% "alt =" "> </a>
-            <br>
-            <br>
-        
-        <img src = "<? php echo baseUrl ();?> images / IMG_5207.JPG" class = "img-fluid" width = "100%" alt = ""> ',
+            <p> * Los proyectos se pueden entregar en una amplia gama de formatos. WAV PCM, DSD, vinilo, cinta analógica de alta resolución, etc. </p>',
     
     'page-pmm-title' => 'Reproductor de referencia PMM DDP',
     'page-pmm-content' => '
         <p> Se requiere el REPRODUCTOR DE REFERENCIA PMM DDP para reproducir la imagen DDP que se proporcionará después de la sesión de masterización. </p>
-        <p> Con el PMM DDP Player puede escuchar las pistas en el orden indicado, verificar los espacios / intervalos entre canciones, tener acceso a toda la información de texto contenida en el Red Book CD Master, como títulos, nombres de canciones, nombre de el artista, códigos ISRC, etc., graba un CD de Red Book, exporta archivos en formatos .wav, .aiff, ALAC, FLAC, AAC y mp3. </p>
-        <div class = "fila pt-4">
-            <div class = "col-md-3 text-center">
-                <a href="<?php echo baseUrl(); ?> download / ddpp3000PMM.pkg.zip "target =" _ blank "download> <button class =" btn-post "> Mac OS X </button> </ a >
-                
-            </div>
-            <div class = "col-md-3 text-center">
-                <a href="<?php echo baseUrl(); ?> download / ddpp3000PMM.zip "target =" _ blank "download> <button class =" btn-post "> Windows </button> </a>
-                
-            </div>
-        </div> ',
+        <p> Con el PMM DDP Player puede escuchar las pistas en el orden indicado, verificar los espacios / intervalos entre canciones, tener acceso a toda la información de texto contenida en el Red Book CD Master, como títulos, nombres de canciones, nombre de el artista, códigos ISRC, etc., graba un CD de Red Book, exporta archivos en formatos .wav, .aiff, ALAC, FLAC, AAC y mp3. </p> ',
     
     'page-pmm-pmm-title' => 'Servicios',
     'page-pmm-pmm-content' => '

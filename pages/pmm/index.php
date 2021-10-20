@@ -21,6 +21,16 @@
 			<div class="row content-mixagens">
 				<div class="col-md-12 set-content">
 					<?php echo langVar('page-pmm-content'); ?>
+					<div class="row pt-4">
+						<div class="col-md-3 text-center">
+							<a href="<?php echo baseUrl(); ?>download/ddpp3000PMM.pkg.zip" target="_blank" download><button class="btn-post">Mac OS X</button></a>
+							
+						</div>
+						<div class="col-md-3 text-center">
+							<a href="<?php echo baseUrl(); ?>download/ddpp3000PMM.zip" target="_blank" download><button class="btn-post">Windows</button></a>
+							
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
