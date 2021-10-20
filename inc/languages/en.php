@@ -18,7 +18,7 @@ $GLOBALS['lang'] = array(
     'menu-vinyl-mastering' => 'Vinyl Mastering',
     'menu-remastering-restoration' => 'Remastering / Restoration',
     'menu-pmm-ddp-player' => 'PMM DDP Player',
-    'menu-agende-sessao' => 'Schedule a Session',
+    'menu-agende-sessao' => 'Book a Session',
     'menu-conta' => 'Account',
     'menu-entra' => 'Login',
     'footer-direitos-reservados'  => 'All rights reserved',
@@ -27,7 +27,7 @@ $GLOBALS['lang'] = array(
     'page-mastering-title' => 'Studio',
     'page-mastering-content' => '
         <h2>Welcome to Post Modern Mastering</h2>
-        <p><strong>We are delighted to welcome you and look after your music with respect to art, technical excellence, engineering talent, creative vision and supreme attention to detail.</strong></p>
+        <p><strong>We are happy to welcome you and look after your music with respect to art, technical excellence, engineering talent, creative vision and supreme attention to detail.</strong></p>
         <br />
         <strong>Monitoring</strong><br />
         <br />
@@ -183,7 +183,7 @@ $GLOBALS['lang'] = array(
         ',
     
     'page-servicos-vinyl-title' => 'Vinyl Mastering',
-    'page-servicos-vinyl-content' => '<h3>Search and rescue to deliver the real music enjoyment experience.</h3>
+    'page-servicos-vinyl-content' => '<h3>Research and rescue to deliver the real music enjoyment experience.</h3>
         <br>
         <p>The experience of listening to a good vinyl record is unique. Many audiophiles and enthusiasts claim it\'s still the best way to hear and enjoy music. But for this experience to be truly impactful, the fidelity of the audio recorded on vinyl is extremely important. To ensure such fidelity, some aspects and elements such as engineer characteristics, noise floor, distortions, frequency response and range or dynamic range, need attention and specific adjustments in the mastering process carried out for the vinyl format that precedes the cut of the lacquers (Lacquer) and acetate.</p>
 
@@ -191,7 +191,7 @@ $GLOBALS['lang'] = array(
 
         <p>Vinyl-specific mastering to generate lacquers (Lacquer) and acetates can be done in a few ways. The options we offer are:</p>
         <h4>Hi-Res Files for Vinyl</h4>
-        <p>In Post Modern Mastering the entire process is carried out in High-Resolution. After mastering to vinyl, we generate <strong>Hi-Res</strong> files that will be used to cut the lacquers.</p>
+        <p>At Post Modern Mastering the entire process is carried out in High-Resolution. After mastering to vinyl, we generate <strong>Hi-Res</strong> files that will be used to cut the lacquers.</p>
 
         <h4>Tape Layback for Vinyl</h4>
         <p>Even if your album has been recorded and mixed in the digital environment, we do vinyl-specific mastering using our <strong>ATR 102</strong> so that the vinyl cut is made from the analog tape generated on the mastering session. Thus eliminating the need for yet another digital conversion. </p>
@@ -243,7 +243,7 @@ $GLOBALS['lang'] = array(
         <p>Our ATR 102 machine is a special and unique equipment of its kind, as it has exclusive customization and design modifications, carefully thought out by Mike Spitz and our engineer André Dias.</p>
         <p>There are 3 (three) electronics options available for artistic and judicious experimentation (ATR Standard Electronics, ATR Transformless and Aria Discrete Class A Reference Series Electronics); 4 (four) headblock options: Two Track 1/2" inch with Flux Magnetics Mastering Series recording and playback heads with extended frequency response and standard frequency response; Two Track 1/4" inch with Flux recording and playback heads Magnetics Mastering Series with standard frequency response; Full Track 1/4" inch with Flux Magnetics full track playback heads for maximum accuracy in transferring mono recordings.</p>',
     
-    'page-agendamento-title' => 'Schedule a Session',
+    'page-agendamento-title' => 'Book a Session',
     'page-agendamento-projeto' => 'Project',
     'page-agendamento-faixas' => 'How many tracks will your album have?',
     'page-agendamento-mixagens' => 'Mixes',
