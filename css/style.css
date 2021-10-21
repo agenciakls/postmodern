@@ -239,10 +239,14 @@ html .ui-button.ui-state-disabled:active {
     height: 380px;
     display: flex;
     align-items: center;
-	justify-content: flex-start;
-	padding-top: 140px;
+	justify-content: center;
+	padding-top: 0px;
 	flex-direction: column;
 	border-radius: 0px !important;
+}
+.header-slogan.home-style {
+	padding-top: 140px;
+	justify-content: flex-start;
 }
 .box-dark-bg {
 	padding: 20px 30px;

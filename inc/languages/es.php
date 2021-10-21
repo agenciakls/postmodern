@@ -12,7 +12,7 @@ $GLOBALS['lang'] = array(
     'menu-engenheiro' => 'Ingeniero',
     'menu-servicos' => 'Servicios',
     'menu-masterizacao-tradicional' => 'Masterización tradicional',
-    'menu-masterizacao-pmm-tape-layback' => 'Masterizar PMM Tape Layback Mastering®',
+    'menu-masterizacao-pmm-tape-layback' => 'PMM Tape Layback Mastering®',
     'menu-apple-digital-masters-streaming' => 'Apple Digital Masters y Streaming',
     'menu-high-resolution-audio-mastering' => 'Masterización de audio de alta resolución',
     'menu-vinyl-mastering' => 'Vinyl Mastering',
@@ -137,7 +137,7 @@ $GLOBALS['lang'] = array(
             </pequeño>
         </p> ',
     
-    'page-servicos-pmm-title' => 'Masterizar PMM Tape Layback Mastering®',
+    'page-servicos-pmm-title' => 'PMM Tape Layback Mastering®',
     'page-servicos-pmm-content' => '<h3> Un paso más en la excelencia y la mejora de los detalles sonoros y la inmersión musical. </h3>
         <br>
         <p> <strong> PMM Tape Layback Mastering® </strong> es una sesión de masterización en la que el contenido de una grabación realizada en el entorno digital se transfiere a una cinta analógica utilizando un exclusivo Ampex ATR 102 totalmente reconstruido y personalizado por Mike Spitz en ATR Services, Inc. Pensilvania, EE. UU. </p>
