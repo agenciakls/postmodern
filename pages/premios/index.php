@@ -349,6 +349,52 @@
 					<img style="width: 300px; height: 300px; padding:8px;"
 						src="<?php echo baseUrl(); ?>images/premio_paula_fernandes.jpg" alt="Paula Fernandes - Hora Certa"
 						title="Paula Fernandes - Hora Certa" />
+                        
+                    </br>
+                    </br>
+					<h3>2021</h3>
+					<p>
+                        Best Engineered Album 
+                        <i>Antonio Adolfo - BRUMA  - Celebrating Milton Nascimento</i>
+                    </p>
+
+                    <p>
+                        Best Latin Jazz/Jazz Album 
+                        <i>Antonio Adolfo - BRUMA  - Celebrating Milton Nascimento</i>
+                    </p>
+
+                    <p>
+                        Best Folk Album 
+                        <i>Leonel Garcia, Amor Pasado </i>
+                    </p>
+
+                    <p>
+                        Best Instrumental Album 
+                        <i>Hamilton de Holanda e Mestrinho, Canto da Praia - Ao Vivo </i>
+                    </p>
+
+                    <p>
+                        Best Instrumental Album 
+                        <i>Cristovão Bastos e Rogério Caetano, Cristovão Bastos e Rogério Caetano</i>
+                    </p>
+
+                    <p>
+                        Best Roots Album
+                        <i>Elba Ramalho, Eu e Vocês</i>
+                    </p>
+
+                    <p>
+                        Best Sertaneja Music Album
+                        <i>Daniel, Em Casa</i>
+                    </p>
+					<img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-antonio-adolfo.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-ave.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-canto-da-praya.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-cristovao-bastos.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-elba-ramalho-eu-e-voces.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-antonio-adolfo.jpg" />
+                    <img style="width: 300px; height: 300px; padding:8px;" src="<?php echo baseUrl(); ?>images/disco-daniel-em-casa.jpg" />
+
                 </div>
             </div>
         </div>

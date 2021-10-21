@@ -212,7 +212,8 @@ html .ui-button.ui-state-disabled:active {
 }
 	.title-home-pt {
 	    color: black;
-		font-size: 1.2em;
+		font-size: 1em;
+		font-weight: bold;
 	}
 	.container-full-home {
 	    position: absolute;
@@ -239,7 +240,7 @@ html .ui-button.ui-state-disabled:active {
     display: flex;
     align-items: center;
 	justify-content: flex-start;
-	padding-top: 100px;
+	padding-top: 140px;
 	flex-direction: column;
 	border-radius: 0px !important;
 }
@@ -456,7 +457,7 @@ footer {
 }
 .list-language .single-language {
     margin: 15px;
-    max-width: 120px;
+    max-width: 90px;
 	width: 100%;
 }
 .list-language .single-language img {

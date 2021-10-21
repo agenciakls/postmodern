@@ -12,7 +12,7 @@ $GLOBALS['lang'] = array(
     'menu-engenheiro' => 'Ingeniero',
     'menu-servicos' => 'Servicios',
     'menu-masterizacao-tradicional' => 'Masterización tradicional',
-    'menu-masterizacao-pmm-tape-layback' => 'Dominar la distribución de cintas PMM',
+    'menu-masterizacao-pmm-tape-layback' => 'Masterizar PMM Tape Layback Mastering®',
     'menu-apple-digital-masters-streaming' => 'Apple Digital Masters y Streaming',
     'menu-high-resolution-audio-mastering' => 'Masterización de audio de alta resolución',
     'menu-vinyl-mastering' => 'Vinyl Mastering',
@@ -26,10 +26,10 @@ $GLOBALS['lang'] = array(
 
     'page-mastering-title' => 'Estudio',
     'page-mastering-content' => '
-        <h2> Bienvenido a la masterización posmoderna </h2>
+        <h2> Bienvenido a Post Modern Mastering  </h2>
         <p> <strong> Estamos encantados de darle la bienvenida y cuidar su música con respeto al arte, la excelencia técnica, el talento de la ingeniería, la visión creativa y la máxima atención al detalle. </strong> </p>
         <br />
-        <strong> Supervisión </strong> <br />
+        <strong> Monitoreo </strong> <br />
         <br />
         Amplificador de potencia de alta resolución Audio Research SD135 <br />
         Amplificador de potencia de alta resolución multicanal Audio Research SDA1 <br />
@@ -108,7 +108,7 @@ $GLOBALS['lang'] = array(
     'page-masterizacao-title' => 'Mastering',
     'page-masterizacao-content' => '
         <h3> Ayudamos a preparar música para sorprender, emocionar e involucrar, presentando una nueva forma de escuchar. Nada menos que eso. </h3>
-        <p class = "text-h-2"> La maestría no es una fórmula, es una forma de arte genuina. </p>
+        <p class = "text-h-2"> Masterizar no es una fórmula, es una forma de arte genuina. </p>
         <p class = "text-h-2"> Nuestra filosofía es poner la máxima atención en cada detalle y contribuir con nuestro arte a expresar con precisión, impacto emocional y artístico la esencia de cada grabación y brindar una experiencia sonora y sensorial inolvidable . </p>
 
         <p class = "pt-5">
@@ -124,7 +124,7 @@ $GLOBALS['lang'] = array(
             Ayudamos a preparar música para sorprender, emocionar e involucrar. Nada menos que eso.
         </h3>
         <p class = "text-h-2">
-            Dominar no es una fórmula, es una forma de arte genuina.
+        Masterizar no es una fórmula, es una forma de arte genuina.
         </p>
         <p class = "text-h-2">
             Nuestra filosofía es cuidar cada detalle con la máxima atención y contribuir con nuestro arte a expresar con precisión, impacto emocional y artístico la esencia de cada grabación y brindar una experiencia sonora y sensorial inolvidable.
@@ -137,7 +137,7 @@ $GLOBALS['lang'] = array(
             </pequeño>
         </p> ',
     
-    'page-servicos-pmm-title' => 'Dominar PMM Tape Layback®',
+    'page-servicos-pmm-title' => 'Masterizar PMM Tape Layback Mastering®',
     'page-servicos-pmm-content' => '<h3> Un paso más en la excelencia y la mejora de los detalles sonoros y la inmersión musical. </h3>
         <br>
         <p> <strong> PMM Tape Layback Mastering® </strong> es una sesión de masterización en la que el contenido de una grabación realizada en el entorno digital se transfiere a una cinta analógica utilizando un exclusivo Ampex ATR 102 totalmente reconstruido y personalizado por Mike Spitz en ATR Services, Inc. Pensilvania, EE. UU. </p>
