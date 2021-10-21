@@ -76,7 +76,8 @@ dateSelectedPrazo = '';
 $("#datepicker").fadeOut(0);
 $("#orcamento-detalhes").fadeOut(0);
 $( function() {
-	$.datepicker.regional['pt-BR'] = {
+	var idiomaAtual = window.idiomaAtual;
+	$.datepicker.regional['pt'] = {
 		closeText: 'Fechar',
 		prevText: 'Anterior',
 		nextText: 'Próximo',
@@ -93,10 +94,45 @@ $( function() {
 		firstDay: 0,
 		isRTL: false,
 		showMonthAfterYear: false,
-		yearSuffix: ''};
-	$.datepicker.setDefaults($.datepicker.regional['pt-BR']);
+		yearSuffix: ''
+	};
+	$.datepicker.regional['en'] = {
+		closeText: 'Close',
+		prevText: 'Previous',
+		nextText: 'Next',
+		currentText: 'Today',
+		monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+		monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
+		dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+		dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+		dayNamesMin: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],
+		weekHeader: 'Sm',
+		dateFormat: 'dd/mm/yy',
+		firstDay: 0,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ''
+	};
+	$.datepicker.regional['es'] = {
+		closeText: 'Cerrar',
+		prevText: 'Anterior',
+		nextText: 'Próximo',
+		currentText: 'Hoy dia',
+		monthNames: ['Enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'],
+		monthNamesShort: ['Ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'],
+		dayNames: [ 'domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'sábado' ],
+		dayNamesShort: [ 'dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'sáb' ],
+		dayNamesMin: [ 'dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'sáb' ],
+		weekHeader: 'Sm',
+		dateFormat: 'dd/mm/yy',
+		firstDay: 0,
+		isRTL: false,
+		showMonthAfterYear: false,
+		yearSuffix: ''
+	};
+	$.datepicker.setDefaults($.datepicker.regional[idiomaAtual]);
 	$( "#datepicker" ).datepicker({
-		language: 'pt-BR',
+		language: idiomaAtual,
 		minDate: new Date(),
 		beforeShowDay: $.datepicker.noWeekends,
 		onSelect: function (dateText, inst) {

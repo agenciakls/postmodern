@@ -52,6 +52,7 @@
 	var valorVersion = <?php echo number_format(returnSetting($versao), 2, '.', ''); ?>;
 	var valorVinyl = <?php echo number_format(returnSetting($vinyl), 2, '.', ''); ?>;
 	var moedaValor = '<?php echo langVar('moeda'); ?>';
+	var idiomaAtual = '<?php echo $whatLang; ?>';
 	</script>
 	<script type="text/javascript" src="<?php echo baseUrl(); ?>js/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo baseUrl(); ?>js/jquery-ui.js"></script>
