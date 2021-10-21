@@ -52,20 +52,54 @@ $('.field-mix').on('keypress', function ( e ) {
 	else {$(this).val(0); return false;}
 });
 
-var selectMonth = function (month) {
-	switch(month) {
-		case 1: var month = 'Janeiro'; break;
-		case 2: var month = 'Fevereiro'; break;
-		case 3: var month = 'Março'; break;
-		case 4: var month = 'Abril'; break;
-		case 5: var month = 'Maio'; break;
-		case 6: var month = 'Junho'; break;
-		case 7: var month = 'Julho'; break;
-		case 8: var month = 'Agosto'; break;
-		case 9: var month = 'Setembro'; break;
-		case 10: var month = 'Outubro'; break;
-		case 11: var month = 'Novembro'; break;
-		case 12: var month = 'Dezembro'; break;
+var selectMonth = function (month, idiomaAtual = 'pt') {
+	if (idiomaAtual == 'en'){
+		switch(month) {
+			case 1: var month = 'January'; break;
+			case 2: var month = 'February'; break;
+			case 3: var month = 'March'; break;
+			case 4: var month = 'April'; break;
+			case 5: var month = 'May'; break;
+			case 6: var month = 'June'; break;
+			case 7: var month = 'July'; break;
+			case 8: var month = 'August'; break;
+			case 9: var month = 'September'; break;
+			case 10: var month = 'October'; break;
+			case 11: var month = 'November'; break;
+			case 12: var month = 'December'; break;
+		}
+	}
+	else if (idiomaAtual == 'es') {
+		switch(month) {
+			case 1: var month = 'Enero'; break;
+			case 2: var month = 'febrero'; break;
+			case 3: var month = 'marzo'; break;
+			case 4: var month = 'abril'; break;
+			case 5: var month = 'mayo'; break;
+			case 6: var month = 'junio'; break;
+			case 7: var month = 'julio'; break;
+			case 8: var month = 'agosto'; break;
+			case 9: var month = 'septiembre'; break;
+			case 10: var month = 'octubre'; break;
+			case 11: var month = 'noviembre'; break;
+			case 12: var month = 'diciembre'; break;
+		}
+	}
+	else {
+		switch(month) {
+			case 1: var month = 'Janeiro'; break;
+			case 2: var month = 'Fevereiro'; break;
+			case 3: var month = 'Março'; break;
+			case 4: var month = 'Abril'; break;
+			case 5: var month = 'Maio'; break;
+			case 6: var month = 'Junho'; break;
+			case 7: var month = 'Julho'; break;
+			case 8: var month = 'Agosto'; break;
+			case 9: var month = 'Setembro'; break;
+			case 10: var month = 'Outubro'; break;
+			case 11: var month = 'Novembro'; break;
+			case 12: var month = 'Dezembro'; break;
+		}
 	}
 	return month;
 }
@@ -153,8 +187,8 @@ $( function() {
 
 			dateSelected = year + '-' + month + '-' + day + ' ' + hour + ':00';
 			dateSelectedPrazo = prazoYear + '-' + prazoMonth + '-' + prazoDay + ' ' + prazoHour + ':00';
-			month = selectMonth(month);
-			prazoMonth = selectMonth(prazoMonth);
+			month = selectMonth(month, idiomaAtual);
+			prazoMonth = selectMonth(prazoMonth, idiomaAtual);
 
 			$("#setDate").html(day + ' de ' + month + ' de ' + year);
 			$("#setHour").html(hour);
