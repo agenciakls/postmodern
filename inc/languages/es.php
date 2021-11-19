@@ -542,6 +542,11 @@ $GLOBALS['lang'] = array(
     'sendnotification-content-descricao-1' => 'El cliente',
     'sendnotification-content-descricao-2' => 'cambió la descripción de un servicio, verifique la descripción en el sistema. ',
     'sendnotification-content-descricao-3' => '¡En estos casos puede contener información importante!',
+    
 
+    'script-recupera-senha-erro' => 'Hubo un error, ¡inténtelo de nuevo más tarde!',
+    'script-recupera-senha-recuperacao' => 'Le hemos enviado un correo electrónico con la información de recuperación.',
+    'script-recupera-senha-usuario-nao-existe' => 'El nombre de usuario no existe en nuestro sistema.',
+    'script-recupera-senha-verifique' => '¡Verifique su nombre de usuario o correo electrónico y vuelva a intentarlo!',
 );
 ?>

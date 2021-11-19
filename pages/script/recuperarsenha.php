@@ -1,4 +1,6 @@
 <?php 
+$jsonResponse = array('status' => false, 'response' => langVar('script-recupera-senha-erro'));
+
 if (isset($_POST['usuario'])) {
 	$usuarioEmail = $_POST['usuario'];
 	$args = array(
@@ -15,7 +17,8 @@ if (isset($_POST['usuario'])) {
 			$tokenGerado = idUnica();
 			$recuperacao = mysqli_query($conectar, sprintf("INSERT INTO token_senha (cliente_id, token, status) VALUES ('%s', '%s', 'ativo') ", $impUsuario['id'], $tokenGerado));
 			if ($recuperacao) {
-				echo 'enviado';
+				$jsonResponse['status'] = true;
+				$jsonResponse['response'] = langVar('script-recupera-senha-recuperacao');
 				$argsEmail = array(
 					'type' => 'senha',
 					'destinatario' => array(
@@ -31,12 +34,11 @@ if (isset($_POST['usuario'])) {
 				sendmail($argsEmail);
 				sendnotification($argsEmail);
 			}
-			else {
-				echo 'nao_gerado';
-			}
+			else { $jsonResponse['status'] = false; }
 		}
 	}
-	else { echo 'nao_existe'; }
+	else { $jsonResponse['status'] = false; $jsonResponse['response'] = langVar('script-recupera-senha-usuario-nao-existe'); }
 }
-else {echo 'nao_existe'; }
-?>
+else {$jsonResponse['status'] = false; $jsonResponse['response'] = lanVar('script-recupera-senha-verifique'); }
+
+echo json_encode($jsonResponse);
